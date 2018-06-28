@@ -1,17 +1,4 @@
 ---
-- name: Add VMWare tools repository.
-  template:
-    src: vmware-tools.repo.j2
-    dest: /etc/yum.repos.d/vmware-tools.repo
-
-- name: Import VMWare tools GPG keys.
-  rpm_key:
-    key: "{{ item }}"
-    state: present
-  with_items:
-    - "http://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-DSA-KEY.pub"
-    - "http://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-RSA-KEY.pub"
-
 - name: Add vmhgfs module (RHEL 6).
   template:
     src: vmhgfs.modules.j2
