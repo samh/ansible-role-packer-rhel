@@ -1,2 +1,5 @@
 # Install "full" VMware tools using ISO. If false, install open-vm-tools.
 packer_full_vmware_tools: true
+
+# Disable for machines (e.g. production VMs) that won't be used with Vagrant
+packer_vagrant_ssh_config: true

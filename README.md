@@ -55,6 +55,10 @@ Available variables are listed below, along with default values (see `defaults/m
 
 Whether to install the "full" VMware tools (from `/home/vagrant/linux.iso`) or (if false) to install `open-vm-tools` using yum.
 
+    packer_vagrant_ssh_config: true
+
+Whether to install the global Vagrant public SSH key as an authorized key for the `vagrant` user. Disable for VMs that will not be used with Vagrant.
+
 ## Dependencies
 
 None.
