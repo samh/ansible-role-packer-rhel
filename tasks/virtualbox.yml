@@ -1,4 +1,6 @@
 ---
+- include: build-packages.yml
+
 - name: Get VirtualBox version.
   shell: cat /home/vagrant/.vbox_version
   register: virtualbox_version

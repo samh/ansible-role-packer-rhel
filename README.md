@@ -49,7 +49,11 @@ If you'd like to add additional roles, make sure you add them to the `role_paths
 
 ## Role Variables
 
-None.
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+    packer_full_vmware_tools: true
+
+Whether to install the "full" VMware tools (from `/home/vagrant/linux.iso`) or (if false) to install `open-vm-tools` using yum.
 
 ## Dependencies
 

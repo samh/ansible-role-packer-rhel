@@ -1,0 +1,14 @@
+- name: Ensure necessary packages are installed.
+  yum: "name={{ item }} state=present"
+  with_items:
+    - wget
+    - perl
+    - cpp
+    - gcc
+    - make
+    - bzip2
+    - kernel-headers
+    - kernel-devel
+    - "kernel-devel-{{ kernel_release.stdout }}"
+    - libselinux-python
+    - cifs-utils

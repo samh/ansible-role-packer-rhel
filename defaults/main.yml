@@ -1,0 +1,2 @@
+# Install "full" VMware tools using ISO. If false, install open-vm-tools.
+packer_full_vmware_tools: true
