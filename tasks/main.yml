@@ -57,12 +57,18 @@
 
 - name: Clean up yum.
   command: yum clean all
+  args:
+    warn: no
 
 - name: Remove any remnants of VirtualBox ISOs.
   shell: rm -rf VBoxGuestAdditions_*.iso VBoxGuestAdditions_*.iso.?
+  args:
+    warn: no
 
 - name: Remove RedHat interface persistence (step 1).
   shell: rm -f /etc/udev/rules.d/70-persistent-net.rules
+  args:
+    warn: no
 
 - name: Remove RedHat interface persistence (step 2).
   lineinfile:
